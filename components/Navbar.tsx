@@ -1,11 +1,12 @@
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import React from 'react';
-
+import { Button } from 'native-base';
+import { SafeAreaView } from 'react-native-safe-area-context';
 const Navbar = () => {
 	return (
-		<View>
-			<Text>Navbar</Text>
-		</View>
+		<SafeAreaView>
+			<Button>Navbar</Button>
+		</SafeAreaView>
 	);
 };
 
