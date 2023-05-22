@@ -1,21 +1,20 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { HomeScreen } from './screens';
-import { NativeBaseProvider } from 'native-base';
+import { NavigationContainer } from "@react-navigation/native"
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import { NativeBaseProvider } from "native-base"
+import { Navbar } from "./src/components"
+import { Home } from "./src/screens"
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator()
+
 export default function App() {
-	return (
-		<NavigationContainer>
-			<NativeBaseProvider>
-				<Stack.Navigator>
-					<Stack.Screen
-						name="Home"
-						component={HomeScreen}
-						options={{ headerShown: false }}
-					/>
-				</Stack.Navigator>
-			</NativeBaseProvider>
-		</NavigationContainer>
-	);
+  return (
+    <NativeBaseProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+        </Stack.Navigator>
+        <Navbar />
+      </NavigationContainer>
+    </NativeBaseProvider>
+  )
 }
