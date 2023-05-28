@@ -1,7 +1,7 @@
 import {Box, Center} from 'native-base';
 import React from 'react';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {SafeAreaView, useColorScheme} from 'react-native';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const Home = () => {
   const bgColor = useColorScheme() === 'dark' ? Colors.black : Colors.white;
@@ -23,7 +23,7 @@ const Home = () => {
               base: 200,
               lg: 250,
             }}>
-            This is the Center
+            This is the NOT Center
           </Center>
         </Center>
       </Box>
