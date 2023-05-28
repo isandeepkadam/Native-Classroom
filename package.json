@@ -6,7 +6,7 @@
     "native-base": "^3.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.71.3",
+    "react-native": "0.71.8",
     "react-native-heroicons": "^3.2.0",
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0",
@@ -24,7 +24,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "expo-cli": "^6.3.7",
     "husky": ">=6",
     "lint-staged": ">=10",
     "prettier": "2.8.8",
@@ -44,5 +43,11 @@
   "lint-staged": {
     "*.js": "npm run lint",
     "*.{js,css,md,html,json}": "prettier --cache --write"
+  },
+  "resolutions": {
+    "react-devtools-core": "~4.25.0"
+  },
+  "overrides": {
+    "react-devtools-core": "~4.25.0"
   }
 }
