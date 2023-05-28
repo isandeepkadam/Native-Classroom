@@ -1,22 +1,27 @@
-import { NavigationContainer } from "@react-navigation/native"
-import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { NativeBaseProvider } from "native-base"
-import { Navbar } from "./src/components"
-import { Home, Login, Register } from "./src/screens"
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {NativeBaseProvider} from 'native-base';
+import React from 'react';
+import Home from './src/screens/home';
 
-const Stack = createNativeStackNavigator()
+const NavStack = createNativeStackNavigator();
 
-export default function App() {
+function App(): JSX.Element {
+  return (
+    <NavigationContainer>
+      <NavStack.Navigator initialRouteName="Home">
+        <NavStack.Screen name="Home" component={Home} />
+      </NavStack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+const MainApp = (): JSX.Element => {
   return (
     <NativeBaseProvider>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="Register" component={Register} />
-        </Stack.Navigator>
-        <Navbar />
-      </NavigationContainer>
+      <App />
     </NativeBaseProvider>
-  )
-}
+  );
+};
+
+export default MainApp;
